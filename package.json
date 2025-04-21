@@ -1,0 +1,15 @@
+{
+  "name": "oarabile-koore",
+  "version": "0.0.1",
+  "description": "My website written with my own framework.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "Oarabile Koore",
+  "license": "ISC",
+  "dependencies": {
+    "innerscope": "^0.1.81",
+    "vite": "^6.3.2"
+  }
+}
