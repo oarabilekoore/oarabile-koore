@@ -1,4 +1,4 @@
-# Here is my personal website
+# MY WEBSITE
 
 Here is my personal website in development written using my own framework and tooling.
 To chech the framework behind all this go to [Innerscope](https://github.com/oarabilekoore/innerscope.ts)

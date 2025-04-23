@@ -13,6 +13,8 @@ const route_config: PageRouterConfig = {
 export const app = new Application({
   title: "Oarabile Koore",
   routes: route_config,
+  allowzoom: false,
+  scrollbarvisibility: "hidden",
 });
 
 app.onStart(HomePage);
