@@ -5,15 +5,14 @@ export type ButtonSizes = "small" | "medium" | "large";
 export type ButtonPropertties = {
   label: string;
   icon?: string;
-  disabled?: boolean;
   size?: ButtonSizes;
+  disabled?: boolean;
 };
 
 export function TonalButton(props: ButtonPropertties, parent: Parent) {
   const { label, icon, disabled, size } = props;
   const element = genericElement("button");
   const button = element(parent);
-
   button.textContent = label;
   button.style.backgroundColor = tonal_color_object.background;
   button.style.color = "black";
