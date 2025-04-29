@@ -1,6 +1,5 @@
 import { genericElement, Parent } from "innerscope";
 import { tonal_color_object } from "./styling";
-
 export type ButtonSizes = "small" | "medium" | "large";
 export type ButtonPropertties = {
   label: string;
@@ -27,5 +26,13 @@ export function TonalButton(props: ButtonPropertties, parent: Parent) {
   button.style.margin = "4px";
   button.style.width = "200px";
   button.style.height = "50px";
-  button.style.textDecoration = "bold";
+  button.style.fontWeight = "400";
+  button.style.fontSize = "1rem";
+  button.style.fontFamily = "Unica One, sans-serif";
+  button.onmouseenter = function () {
+    button.style.backgroundColor = "#ffffff";
+  };
+  button.onmouseleave = function () {
+    button.style.backgroundColor = tonal_color_object.background;
+  };
 }
