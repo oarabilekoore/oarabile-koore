@@ -9,7 +9,9 @@
     "author": "Oarabile Koore",
     "license": "ISC",
     "dependencies": {
-        "innerscope": "^0.1.90",
+        "@stitches/core": "^1.2.8",
+        "@stitches/react": "^1.2.8",
+        "viewkit-ui": "^0.2.2",
         "vite": "^6.3.2"
     }
 }

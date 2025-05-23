@@ -1,38 +1,40 @@
-import { genericElement, Parent } from "innerscope";
+import { genericElement, Parent } from "viewkit-ui";
 import { tonal_color_object } from "./styling";
+import { css } from "@stitches/core";
+
 export type ButtonSizes = "small" | "medium" | "large";
 export type ButtonPropertties = {
-  label: string;
-  icon?: string;
-  size?: ButtonSizes;
-  disabled?: boolean;
+    label: string;
+    icon?: string;
+    size?: ButtonSizes;
+    disabled?: boolean;
 };
 
+const tonal_style = css({
+    backgroundColor: tonal_color_object.background,
+    color: "black",
+    borderRadius: "4px",
+    padding: "8px 16px",
+    border: "none",
+    cursor: "pointer",
+    transition: "background-color 0.3s ease",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    outline: "none",
+    margin: "4px",
+    width: "200px",
+    height: "50px",
+    fontWeight: "400",
+    fontSize: "1rem",
+    fontFamily: "Unica One, sans-serif",
+    "&:hover": {
+        backgroundColor: "#ffffff",
+    },
+});
+
 export function TonalButton(props: ButtonPropertties, parent: Parent) {
-  const { label, icon, disabled, size } = props;
-  const element = genericElement("button");
-  const button = element(parent);
-  button.textContent = label;
-  button.style.backgroundColor = tonal_color_object.background;
-  button.style.color = "black";
-  button.style.borderRadius = "4px";
-  button.style.padding = "8px 16px";
-  button.style.border = "none";
-  button.style.cursor = "pointer";
-  button.style.transition = "background-color 0.3s ease";
-  button.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
-  button.style.outline = "none";
-  button.style.border = "none";
-  button.style.margin = "4px";
-  button.style.width = "200px";
-  button.style.height = "50px";
-  button.style.fontWeight = "400";
-  button.style.fontSize = "1rem";
-  button.style.fontFamily = "Unica One, sans-serif";
-  button.onmouseenter = function () {
-    button.style.backgroundColor = "#ffffff";
-  };
-  button.onmouseleave = function () {
-    button.style.backgroundColor = tonal_color_object.background;
-  };
+    const { label, icon, disabled, size } = props;
+    const element = genericElement("button");
+    const button = element(parent);
+    button.textContent = label;
+    button.classList.add(tonal_style());
 }
