@@ -1,16 +1,15 @@
 {
     "name": "oarabile-koore",
     "version": "0.0.1",
-    "description": "My website written with my own framework.",
+    "description": "my website written with my own framework.",
     "main": "index.js",
     "scripts": {
         "dev": "vite"
     },
     "author": "Oarabile Koore",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "@stitches/core": "^1.2.8",
-        "@stitches/react": "^1.2.8",
         "viewkit-ui": "^0.2.2",
         "vite": "^6.3.2"
     }

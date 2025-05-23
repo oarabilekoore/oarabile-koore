@@ -5,9 +5,8 @@
       "name": "oarabile-koore",
       "dependencies": {
         "@stitches/core": "^1.2.8",
-        "@stitches/react": "^1.2.8",
         "viewkit-ui": "^0.2.2",
-        "vite": "^6.3.2",
+        "vite": "^6.3.2"
       },
     },
   },
