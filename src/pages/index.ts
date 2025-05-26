@@ -1,8 +1,6 @@
 import { Widget } from "viewkit-ui";
 import { app } from "../../index.ts";
 import SideBar from "../components/sidebar.ts";
-import Letter from "../components/letter.ts";
-import { TonalButton } from "../components/buttons.ts";
 
 export default function HomePage() {
     const page = Widget.LinearLayout(app.root);
@@ -26,5 +24,4 @@ export default function HomePage() {
     divider.style.width = "3rem";
     divider.style.backgroundColor = "#ffffff";
 
-    TonalButton({ label: "Click Me" }, content);
 }

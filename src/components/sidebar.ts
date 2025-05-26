@@ -1,4 +1,7 @@
 import { Widget, Parent } from "viewkit-ui";
+import { TonalButton } from "./buttons";
+import { profile_icon } from "../../resources/constants";
+
 export default function SideBar(parent: Parent) {
     const sidebar = Widget.LinearLayout(parent);
     sidebar.LayoutDirection = "TOP_TO_BOTTOM";
@@ -13,7 +16,15 @@ export default function SideBar(parent: Parent) {
     logo.style.height = "100px";
     logo.style.margin = "1rem";
     //@ts-ignore
-    logo.src = "https://avatars.githubusercontent.com/u/153186345?v=4";
+    logo.src = profile_icon;
 
+    const divider = Widget.HorizontalRule(sidebar);
+    divider.style.width = "3rem";
+    divider.style.backgroundColor = "#ffffff";
+
+    TonalButton({ label: "GitHub" }, sidebar);
+    TonalButton({ label: "DEV.TO" }, sidebar);
+    TonalButton({ label: "Proffesional CV" }, sidebar);
+    
     return sidebar;
 }

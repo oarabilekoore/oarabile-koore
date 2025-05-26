@@ -1,5 +1,5 @@
 import { Application, PageRouterConfig } from "viewkit-ui";
-import HomePage from "./resources/pages/index.ts";
+import HomePage from "./src/pages/index.ts";
 
 const route_config: PageRouterConfig = {
     mode: "history",

@@ -33,8 +33,24 @@ const tonal_style = css({
 
 export function TonalButton(props: ButtonPropertties, parent: Parent) {
     const { label, icon, disabled, size } = props;
+    icon ? add_icon_button() : null;
+    size ? resize_button() : null;
+    disabled ? disable_button() : null;
+
     const element = genericElement("button");
     const button = element(parent);
     button.textContent = label;
     button.classList.add(tonal_style());
+
+    function add_icon_button(){
+
+    }
+
+    function resize_button(){
+
+    }
+
+    function disable_button(){
+        
+    }
 }
